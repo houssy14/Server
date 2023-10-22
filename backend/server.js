@@ -1,11 +1,12 @@
 const express=require("express")
-require("./Config/mongs").connect()
+require("./config/mongs").connect()
 const cors=require("cors")
-const authrout = require("./router/authrout")
-const app= express()
+const authrouters = require("./routers/authrouters")
+const app=express()
 app.use(express.json())
 app.use(cors())
-app.use(authrout)
+app.use(authrouters)
+
 
 
 

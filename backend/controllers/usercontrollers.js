@@ -1,28 +1,27 @@
-const user = require("../model/users");
+const users5= require("../model/users");
 
 module.exports.login = async (req, res) => {
-    const {email, password,} = req.body;
+    const {email, password} = req.body;
 
-    const theuser = await user.findOne({email, password});
+    const theusers5 = await user.findOne({email, password});
 
-    if (theuser !== null) {
-        return res.status(200).json(theuser);
+    if (theusers5 !== null) {
+        return res.status(200).json(theusers5);
     } else {
         return res.status(400).json({message: "user not found"});
     }
 };
 
 module.exports.register = (req, res) => {
-    const {username, email, password,register} = req.body;
+    const {username, email, password} = req.body;
 
-    const newuser = new user({
+    const newusers5 = new users5({
         username,
         email,
         password,
-     
     });
-    console.log(newuser)
-    newuser.save().then(
+    console.log(newusers5)
+    newusers5.save().then(
         () => {
             return res.status(200).json({message: "wlecome  new user"});
         }).catch(
