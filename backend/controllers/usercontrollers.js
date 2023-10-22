@@ -1,9 +1,9 @@
 const user = require("../model/users");
 
 module.exports.login = async (req, res) => {
-    const {email, password,register} = req.body;
+    const {email, password,} = req.body;
 
-    const theuser = await user.findOne({email, password,register});
+    const theuser = await user.findOne({email, password});
 
     if (theuser !== null) {
         return res.status(200).json(theuser);
@@ -19,7 +19,7 @@ module.exports.register = (req, res) => {
         username,
         email,
         password,
-        register,
+     
     });
     console.log(newuser)
     newuser.save().then(
