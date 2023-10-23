@@ -5,10 +5,29 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
+  margin: 0; /* Supprime la marge par défaut du corps */
+  padding: 0; /* Supprime le rembourrage par défaut du corps */
+  border: 50px solid #ffffff; /* Bordure de 5 pixels solide noire */
+  box-sizing: border-box; /* Inclut la bordure dans les dimensions */
  
 }
 
 h1 {
   background: linear-gradient(to bottom right, #e0deea, #0d0899);
+  width: 300px; /* Largeur de la boîte de connexion */
+  margin: 0 auto; /* Centrez horizontalement la boîte */
+  padding: 20px; /* Espacement intérieur */
+  border: 1px solid #ccc; /* Bordure de 1 pixel solide grise */
+  border-radius: 5px; /* Coins arrondis */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombre légère */
+}
+
+h2 {
+  width: 300px; /* Largeur de la boîte de connexion */
+  margin: 0 auto; /* Centrez horizontalement la boîte */
+  padding: 20px; /* Espacement intérieur */
+  border: 1px solid #ccc; /* Bordure de 1 pixel solide grise */
+  border-radius: 5px; /* Coins arrondis */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombre légère */
+  background: linear-gradient(to bottom right,rgb(244, 244, 244),rgb(10, 27, 219));
 }

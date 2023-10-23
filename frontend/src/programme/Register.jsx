@@ -25,8 +25,8 @@ const Register=()=>{
 
     return(
         <>
-        <h1>Register Form</h1>
-        
+        <h2>Register Form</h2>
+        <br></br>
         <form onSubmit={Registerfunction}>
             <div>
                 <label htmlFor='username'>username</label>
@@ -34,13 +34,16 @@ const Register=()=>{
                 onChange={(e)=> setusername(e.target.value)}
                 />
             </div>
+            <br></br>
             <div>
                 <label htmlFor='email'>email</label>
                 <input type="email" name="email" id="email"
                 onChange={(e)=> setemail(e.target.value)}
 
                 />
+               
             </div>
+            <br></br>
             <div>
                 <label htmlFor='password'>password</label>
                 <input type="password" name="password" id="password"
@@ -48,6 +51,7 @@ const Register=()=>{
 
                 />
             </div>
+            <br></br>
             <div>
             <input type='submit'onClick={notify}/>
             <ToastContainer />
