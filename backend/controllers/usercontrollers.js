@@ -1,12 +1,12 @@
-const users5= require("../model/users");
+const users = require("../model/users");
 
 module.exports.login = async (req, res) => {
     const {email, password} = req.body;
 
-    const theusers5 = await user.findOne({email, password});
+    const theuser = await users.findOne({email, password});
 
-    if (theusers5 !== null) {
-        return res.status(200).json(theusers5);
+    if (theuser !== null) {
+        return res.status(200).json(theuser);
     } else {
         return res.status(400).json({message: "user not found"});
     }
@@ -15,17 +15,17 @@ module.exports.login = async (req, res) => {
 module.exports.register = (req, res) => {
     const {username, email, password} = req.body;
 
-    const newusers5 = new users5({
+    const newusers = new users({
         username,
         email,
         password,
     });
-    console.log(newusers5)
-    newusers5.save().then(
+    console.log(newusers)
+    newusers.save().then(
         () => {
             return res.status(200).json({message: "wlecome  new user"});
         }).catch(
             (err) => {
-                return res.status(400).json({message: err.message});
+                return res.status(40).json({message: err.message});
             });
 };

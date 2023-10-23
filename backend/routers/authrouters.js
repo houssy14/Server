@@ -3,7 +3,7 @@ const { register,login } = require("../controllers/usercontrollers");
 const authrouters=Router();
 
 authrouters.post("./auth/login", login);
-authrouters.post("./auth/password",register);
+authrouters.post("./auth/register",register);
 
 
 

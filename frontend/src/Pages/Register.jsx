@@ -10,7 +10,7 @@ const Register = () => {
   const notify = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3000/auth/register", {
+      .post("http://localhost:8080/auth/register", {
         username,
         email,
         password,
