@@ -1,31 +1,38 @@
-const users = require("../model/users");
+const user = require("../model/users")
+const bcrypt = require('bcryptjs')
+const jwt = require('jsonwebtoken')
 
-module.exports.login = async (req, res) => {
-    const {email, password} = req.body;
+module.exports.login = async(req,res)=>{
+const {email,password} = req.body
 
-    const theuser = await users.findOne({email, password});
-
-    if (theuser !== null) {
-        return res.status(200).json(theuser);
-    } else {
-        return res.status(400).json({message: "user not found"});
+const theuser = await user.findOne({email})
+if(theuser !== null) {
+    if (bcrypt.compareSync(password, theuser.password)) {
+        const token = jwt.sign({_id:theuser._id},"project")
+        return res.status(200).json(token);
+      }
+      else{
+        return res.status(400).json({message: "worng password!"});
     }
+}else{
+    return res.status(400).json({message:'user not found'})
+}
 };
 
-module.exports.register = (req, res) => {
-    const {username, email, password} = req.body;
+module.exports.register = (req,res)=>{
+const {username,email,password} = req.body
+const newuser = new user({
+    username,
+    email,
+    
+    password: bcrypt.hashSync(password, 10)
 
-    const newusers = new users({
-        username,
-        email,
-        password,
-    });
-    console.log(newusers)
-    newusers.save().then(
-        () => {
-            return res.status(200).json({message: "wlecome  new user"});
-        }).catch(
-            (err) => {
-                return res.status(40).json({message: err.message});
-            });
-};
+});
+newuser.save()
+.then(()=>{
+return res.status(200).json({message:"welcom new user"})})
+
+.catch((err)=>{
+    return res.status(400).json({message:err.message})
+})
+}
