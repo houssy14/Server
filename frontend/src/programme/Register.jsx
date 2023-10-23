@@ -12,7 +12,7 @@ const Register=()=>{
     const Registerfunction=(e)=>{
         e.preventDefault();
 
-        axios.post("http://localhost:8003/auth/register",{
+        axios.post("http://localhost:8080/auth/register",{
             username,password,email
         })
         .then(
