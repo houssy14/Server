@@ -4,29 +4,22 @@ body {
  justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0; /* Supprime la marge par défaut du corps */
-  padding: 0; /* Supprime le rembourrage par défaut du corps */
-  border: 50px solid #ffffff; /* Bordure de 5 pixels solide noire */
+  margin: 12; /* Supprime la marge par défaut du corps */
+  padding: 12; /* Supprime le rembourrage par défaut du corps */
+  border: 40px solid #ffffff; /* Bordure de 5 pixels solide noire */
   box-sizing: border-box; /* Inclut la bordure dans les dimensions */
- 
+  border-radius: 1%
+  
+;
 }
 
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
 
-.h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* اختياري - لتعبئة الشاشة بالكامل */
-}
-.h2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* اختياري - لتعبئة الشاشة بالكامل */
-}
 .center {
 display: flex;
-align-items: center;
-justify-content: center;
 flex-direction: column;
+
 }
