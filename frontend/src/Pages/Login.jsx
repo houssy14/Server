@@ -33,8 +33,8 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div className="center">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
       <a class="navbar-brand" href="#">Navbar</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -58,6 +58,7 @@ const Login = () => {
     </nav>
       <th>
         <br></br>
+        <center>
       <h1>Login Form</h1>
       <br></br>
       <form onSubmit={notify}>
@@ -83,6 +84,7 @@ const Login = () => {
         <br></br>
         <input type="submit" />
       </form>
+      </center>
       <Toaster/>
       </th>
     </div>

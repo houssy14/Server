@@ -24,3 +24,9 @@ body {
   align-items: center;
   height: 100vh; /* اختياري - لتعبئة الشاشة بالكامل */
 }
+.center {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
