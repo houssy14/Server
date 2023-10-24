@@ -1,57 +1,26 @@
 body {
   font-family: 'Arial', sans-serif;
   background: linear-gradient(to bottom right, #e0deea, #0d0899);
-  display: flex;
-  justify-content: center;
+ justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0; /* Supprime la marge par défaut du corps */
   padding: 0; /* Supprime le rembourrage par défaut du corps */
   border: 50px solid #ffffff; /* Bordure de 5 pixels solide noire */
   box-sizing: border-box; /* Inclut la bordure dans les dimensions */
-  background-image:url("55.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+ 
 }
 
-h1 {
-  background: linear-gradient(to bottom right, #133ac7, #f7f3f3);
-  width: 300px; /* Largeur de la boîte de connexion */
-  margin: 0 auto; /* Centrez horizontalement la boîte */
-  padding: 20px; /* Espacement intérieur */
-  border: 1px solid #0a0d70; /* Bordure de 1 pixel solide grise */
-  border-radius: 5px; /* Coins arrondis */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombre légère */
-}
 
-h2 {
-  width: 300px; /* Largeur de la boîte de connexion */
-  margin: 0 auto; /* Centrez horizontalement la boîte */
-  padding: 20px; /* Espacement intérieur */
-  border: 1px solid #ccc; /* Bordure de 1 pixel solide grise */
-  border-radius: 5px; /* Coins arrondis */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombre légère */
-  background: linear-gradient(to bottom right,rgb(244, 244, 244),rgb(10, 27, 219));
-}
-.container {
+.h1 {
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
+  align-items: center;
+  height: 100vh; /* اختياري - لتعبئة الشاشة بالكامل */
 }
-
-.content {
-  flex: 1;
-  padding: 20px;
-  text-align: center;
-}
-
-.image {
-  flex: 1;
-  text-align: center;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
+.h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* اختياري - لتعبئة الشاشة بالكامل */
 }

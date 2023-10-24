@@ -25,6 +25,8 @@ const Register=()=>{
 
     return(
         <>
+        <br></br>
+        <br></br>
         <h2>Register Form</h2>
         <br></br>
         <form onSubmit={Registerfunction}>
