@@ -30,15 +30,17 @@ const Register=()=>{
         <h2>Register Form</h2>
         <br></br>
         <form onSubmit={Registerfunction}>
+        <label htmlFor='username'>username</label>
             <div>
-                <label htmlFor='username'>username</label>
+                
                 <input type="username" name="username" id="username"
                 onChange={(e)=> setusername(e.target.value)}
                 />
             </div>
             <br></br>
+            <label htmlFor='email'>email</label>
             <div>
-                <label htmlFor='email'>email</label>
+            
                 <input type="email" name="email" id="email"
                 onChange={(e)=> setemail(e.target.value)}
 
@@ -46,8 +48,8 @@ const Register=()=>{
                
             </div>
             <br></br>
+            <label htmlFor='password'>password</label>
             <div>
-                <label htmlFor='password'>password</label>
                 <input type="password" name="password" id="password"
                 onChange={(e)=> setpassword(e.target.value)}
 
