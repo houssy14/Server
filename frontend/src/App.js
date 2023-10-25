@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 import Login from "./Pages/Login";
-import Register from "./programme/Register";
+import Register from "./Pages/Register";
 import Home from './files/Home';
 
 function App() {
@@ -17,6 +17,7 @@ function App() {
             </Routes>
             <Routes>
               <Route path="/Home" element={<Home/>} />
+            
             </Routes>
       </BrowserRouter>
     </div>

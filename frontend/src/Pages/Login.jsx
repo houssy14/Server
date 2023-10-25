@@ -33,40 +33,39 @@ const Login = () => {
   };
 
   return (
-    <div className="center">
-      <nav class="navbar navbar-expand-lg navbar-bleu bg-light w-100">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="http://localhost:3000/Home">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-      <th>
-        <br></br>
-        <center>
-      <h1>Login Form</h1>
-      <br></br>
+    <div>
+        <div className="center">
+    <nav class="navbar navbar-expand-lg navbar-bleu bg-light w-100">
+    <a class="navbar-brand" href="http://localhost:3000/">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="http://localhost:3000/Home">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:3000/">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+    </div>
+  <br></br>
+      <img src="https://1000logos.net/wp-content/uploads/2017/03/Kfc_logo.png"width={260}height={180}></img>
+<br></br>
+
       <form onSubmit={notify}>
-      <label htmlFor="email">Email</label>
-      <br></br>
-      <br />
+      <label htmlFor="email"><b>Email :</b></label>
         <div>
-      
+     
           <input
             type="email"
             name="email"
@@ -75,11 +74,9 @@ const Login = () => {
           />
         </div>
         <div>
+        <label htmlFor="password"><b>Password :</b></label>
           <br></br>
-        <label htmlFor="password">Password</label>
-        <br></br>
-          <br></br>
-        
+       
           <input
             type="password"
             name="password"
@@ -90,9 +87,7 @@ const Login = () => {
         <br></br>
         <input type="submit" />
       </form>
-      </center>
       <Toaster/>
-      </th>
     </div>
     
   );
