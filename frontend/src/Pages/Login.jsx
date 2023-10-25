@@ -2,12 +2,13 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import toast, { Toaster } from 'react-hot-toast';
+import Home from "./Home";
 
 
 const Login = () => {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
-  let navigate = useNavigate();
+  let navigate = useNavigate(Home);
 
   const notify  = (e) => {
     e.preventDefault();
@@ -58,9 +59,9 @@ const Login = () => {
     </div>
   </nav>
     </div>
-  <br></br>
+ 
       <img src="https://1000logos.net/wp-content/uploads/2017/03/Kfc_logo.png"width={260}height={180}></img>
-<br></br>
+
 
       <form onSubmit={notify}>
       <label htmlFor="email"><b>Email :</b></label>
@@ -92,5 +93,6 @@ const Login = () => {
     
   );
 };
+
 
 export default Login;
