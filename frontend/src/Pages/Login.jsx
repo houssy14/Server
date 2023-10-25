@@ -44,7 +44,7 @@ const Login = () => {
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="http://localhost:3000/Home">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="http://localhost:3000/Home">Menu <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="http://localhost:3000/">Features</a>
