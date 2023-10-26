@@ -4,6 +4,7 @@ import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Home from './Pages/Home';
 
+
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,7 @@ function App() {
             </Routes>
             <Routes>
               <Route path="/Home" element={<Home/>} />
+              
             
             </Routes>
       </BrowserRouter>
