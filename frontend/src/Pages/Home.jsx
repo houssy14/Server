@@ -11,7 +11,7 @@ export default function Home() {
             <div className="card-body">
               <h5 className="card-title">KFC-Lac 1 </h5>
               <p className="card-text">Crispy Strips Meal.</p>
-              <a href="#" className="btn btn-primary">Price</a>
+              <a href="http://localhost:3000/Price" className="btn btn-primary">Price</a>
             </div>
           </div>
         </div>

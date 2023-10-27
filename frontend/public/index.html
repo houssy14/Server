@@ -56,6 +56,26 @@
 
  
 </html>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+  const stripe = Stripe('your_publishable_key');
+
+  document.getElementById('pay-button').addEventListener('click', async () => {
+    const { token } = await stripe.createToken(cardElement);
+
+    // Send the token to your server for processing
+    fetch('/process-payment', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ token: token.id }),
+    });
+  });
+</script>
+
+<button id="pay-button">Pay</button>
 
 <footer>
   <h2>Footer Timetable:</h2>

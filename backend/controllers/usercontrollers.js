@@ -24,7 +24,6 @@ const {username,email,password} = req.body
 const newuser = new user({
     username,
     email,
-    
     password: bcrypt.hashSync(password, 10)
 
 });
